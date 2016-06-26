@@ -4,22 +4,24 @@
 
 var fav = {
   name: 'Hendrick Racing Team #24',
-  driver: ['Chase', 'Elliott'],
+  driver: 'Chase Elliott',
   primarySponsor: 'NAPA Autoparts',
   associateSponsors : ['3M', 'Sunenergy', 'Mountain Dew', 'KBB'],
-  crewChief: ['Alan', 'Gustafson'],
+  crewChief: 'Alan Gustafson',
   carModel: 'Chevrolet SS',
   stats: {wins: 0, top5s: 6, top10s: 11, poles: 2, lapsLead: 118},
-  father: ['Bill', 'Elliott'],
-  owner: ['Rick', 'Hendrick'],
+  father: 'Bill Elliott',
+  owner: 'Rick Hendrick',
   yearFormed: 1992,
 
 }
 
+describeTeam(fav);
+
 function describeTeam(team) {
   console.log('My favorite team is ' + team.name +
   '. Their driver is ' + team.driver + '. He drives a ' + team.carModel +
-  ' sponsored by ' + team.primarySponsor + ', as well as ' +
+  ' sponsored by ' + team.primarySponsor + ', ' +
   listSponsors() + ' The team crew chief is ' + team.crewChief +
   '. The team has ' + listStats() + team.driver +
   '\'s father is \'Hall of Fame Class of 2015\' driver ' +
@@ -46,5 +48,3 @@ function listStats(){
   prettyStats += 'and ' + fav.stats.lapsLead + ' laps lead on the season. ';
   return prettyStats;
 }
-console.log(fav.associateSponsors.length);
-describeTeam(fav);
